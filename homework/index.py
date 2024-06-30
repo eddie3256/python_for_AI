@@ -15,4 +15,4 @@ df3 = df2.set_index("公司名稱")
 df3["公司代號"] = df3["公司代號"].astype(int)
 df3["營業收入-當月營收"] = df3["營業收入-當月營收"].map(to_str)
 df3["營業收入-上月營收"] = df3["營業收入-上月營收"].map(to_str)
-print(df3)
+df3 #直接print格式會跑掉
