@@ -33,5 +33,5 @@ def handle_message(event):
     genai.configure(api_key=os.environ["Gemini_API_KEY"])
     model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(event.message.text)
-    message = TextSendMessage(text=response.txt)
+    message = TextSendMessage(text=response.text)
     line_bot_api.reply_message(event.reply_token, message)
